@@ -3,7 +3,7 @@
 .mode box
   
 -- changes terminal output from standard output (stdout) to pow.txt file
-.output '| cat >> pow.txt'
+.output '| cat >> pow3.txt'
   
 -- updates the pow.txt with content in single quotes
 .print 'first query'  
@@ -12,7 +12,10 @@
 -- Copy your SQL command below here
 
 SELECT * FROM "longlist";
-  
+SELECT * FROM "longlist" LIMIT 5;
+SELECT * FROM "longlist" LIMIT 4;
+SELECT * FROM "longlist" LIMIT 10;
+
 -- After each commit comment out the queries written and then continue to write your queries in this part of the file
 
 -- changes back to stdout    
