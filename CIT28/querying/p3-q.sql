@@ -11,10 +11,14 @@
 -- SQL command (query) to view all the column contents in the longlist table   
 -- Copy your SQL command below here
 
-SELECT * FROM "longlist";
+-- SELECT * FROM "longlist";
+-- SELECT * FROM "longlist" LIMIT 5;
+-- SELECT * FROM "longlist" LIMIT 4;
+-- SELECT * FROM "longlist" LIMIT 10;
 SELECT * FROM "longlist" LIMIT 5;
-SELECT * FROM "longlist" LIMIT 4;
-SELECT * FROM "longlist" LIMIT 10;
+SELECT * FROM "longlist" LIMIT 5;
+SELECT * FROM "longlist" LIMIT 5;
+SELECT * FROM "longlist" LIMIT 5;
 
 -- After each commit comment out the queries written and then continue to write your queries in this part of the file
 
