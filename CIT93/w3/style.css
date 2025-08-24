@@ -1,0 +1,265 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Sets the preferred font family for the body text. */
+    background-color: #eef4f7; /* Defines the background color of the entire page. */
+    color: #333; /* Sets the default text color for the body. */
+    line-height: 1.6; /* Adjusts the spacing between lines of text for readability. */
+    margin: 0; /* Removes default browser margin around the body. */
+    padding: 20px; /* Adds padding around the content within the body. */
+    display: flex; /* Establishes a flex container for direct children. */
+    justify-content: center; /* Horizontally centers content within the body. */
+    align-items: flex-start; /* Aligns items to the start of the cross axis (top for column flex). */
+    min-height: 100vh; /* Ensures the body takes at least the full height of the viewport. */
+}
+
+.container {
+    background-color: #ffffff; /* Sets the background color of the container. */
+    padding: 30px; /* Adds padding inside the container. */
+    border-radius: 10px; /* Rounds the corners of the container. */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Applies a subtle shadow to the container. */
+    width: 100%; /* Makes the container take up the full available width. */
+    max-width: 750px; /* Limits the maximum width of the container. */
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height. */
+}
+
+h1, h2, h3 {
+    color: #0056b3; /* Sets the text color for all heading levels. */
+    text-align: center; /* Centers the text within the headings. */
+    margin-bottom: 25px; /* Adds space below the headings. */
+}
+
+p {
+    text-align: center; /* Centers the text within paragraphs. */
+    margin-bottom: 25px; /* Adds space below the paragraphs. */
+    color: #555; /* Sets the text color for paragraphs. */
+}
+
+form {
+    margin-top: 20px; /* Adds space above the form. */
+    padding-bottom: 20px; /* Adds padding to the bottom of the form. */
+    border-bottom: 1px solid #d0e0ed; /* Adds a bottom border to the form. */
+    margin-bottom: 20px; /* Adds space below the form. */
+}
+
+fieldset {
+    border: 1px solid #d0e0ed; /* Sets the border for fieldsets. */
+    border-radius: 8px; /* Rounds the corners of the fieldsets. */
+    padding: 25px; /* Adds padding inside the fieldsets. */
+    margin-bottom: 30px; /* Adds space below the fieldsets. */
+    background-color: #fcfdfe; /* Sets the background color of the fieldsets. */
+}
+
+legend {
+    font-weight: bold; /* Makes the legend text bold. */
+    color: #0056b3; /* Sets the text color for the legend. */
+    padding: 0 15px; /* Adds horizontal padding around the legend text. */
+    font-size: 1.15em; /* Increases the font size of the legend. */
+}
+
+.form-group {
+    margin-bottom: 18px; /* Adds space below each form group. */
+    display: flex; /* Establishes a flex container for children. */
+    flex-direction: column; /* Stacks children vertically within the form group. */
+}
+
+.form-group label {
+    margin-bottom: 8px; /* Adds space below labels within form groups. */
+    font-weight: 600; /* Makes the label text semibold. */
+    color: #444; /* Sets the text color for labels. */
+}
+
+/* NEW: Styling for headings within radio groups */
+.radio-group-heading {
+    text-align: left; /* Aligns the text of these headings to the left. */
+    font-weight: 600; /* Makes the heading text semibold. */
+    color: #444; /* Sets the text color for the radio group headings. */
+    margin-bottom: 10px; /* Adds space below the radio group heading. */
+    margin-top: 0; /* Removes any default top margin for the heading. */
+}
+
+.form-group input[type="number"] {
+    width: 100%; /* Makes the number input take up full width. */
+    padding: 12px; /* Adds padding inside the number input. */
+    border: 1px solid #a8d4ed; /* Sets the border for the number input. */
+    border-radius: 6px; /* Rounds the corners of the number input. */
+    box-sizing: border-box; /* Includes padding and border in the input's total width and height. */
+    font-size: 1em; /* Sets the font size for the number input. */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Adds smooth transitions for border and shadow on interaction. */
+}
+
+.form-group input[type="number"]:focus {
+    border-color: #007bff; /* Changes border color on focus. */
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25); /* Adds a blue glow shadow on focus. */
+    outline: none; /* Removes the default browser outline on focus. */
+}
+
+.radio-group {
+    display: flex; /* Establishes a flex container for radio buttons. */
+    flex-direction: row; /* Arranges radio buttons horizontally. */
+    flex-wrap: wrap; /* Allows radio buttons to wrap to the next line if space is insufficient. */
+    gap: 15px; /* Adds space between radio buttons. */
+    margin-top: 0; /* Removes any default top margin for the group. */
+    margin-bottom: 15px; /* Adds space below the radio group. */
+}
+
+.radio-group label {
+    font-weight: normal; /* Overrides default bolding for labels within radio groups. */
+    margin-bottom: 0; /* Removes default bottom margin for labels within radio groups. */
+    cursor: pointer; /* Changes cursor to a pointer when hovering over the label. */
+    display: flex; /* Makes the label itself a flex container. */
+    align-items: center; /* Vertically aligns the radio input and its text within the label. */
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 5px; /* Adds space between the radio button and its associated text. */
+    width: 18px; /* Sets the width of the radio button. */
+    height: 18px; /* Sets the height of the radio button. */
+    accent-color: #007bff; /* Changes the color of the radio button itself. */
+}
+
+/* Updated checkbox-group style */
+.checkbox-group label { /* Applies flex properties to the label itself for checkboxes. */
+    font-weight: normal; /* Overrides default bolding for labels within checkbox groups. */
+    margin-bottom: 0; /* Removes default bottom margin for labels within checkbox groups. */
+    cursor: pointer; /* Changes cursor to a pointer when hovering over the label. */
+    display: flex; /* Makes the label itself a flex container. */
+    align-items: center; /* Vertically aligns the checkbox input and its text within the label. */
+}
+.checkbox-group input[type="checkbox"] {
+    margin-right: 12px; /* Adds space between the checkbox and its associated text. */
+    width: 20px; /* Sets the width of the checkbox. */
+    height: 20px; /* Sets the height of the checkbox. */
+    accent-color: #007bff; /* Changes the color of the checkbox itself. */
+}
+
+button[type="submit"], .secondary-button {
+    display: inline-block; /* Makes buttons block-level but allows them to sit inline. */
+    padding: 12px 20px; /* Adds padding inside the buttons. */
+    border: none; /* Removes the default button border. */
+    border-radius: 8px; /* Rounds the corners of the buttons. */
+    font-size: 1em; /* Sets the font size for button text. */
+    font-weight: bold; /* Makes button text bold. */
+    cursor: pointer; /* Changes cursor to a pointer when hovering over buttons. */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Adds smooth transitions for background and transform on interaction. */
+    margin-top: 15px; /* Adds space above the buttons. */
+    margin-right: 10px; /* Adds space to the right of the buttons. */
+}
+
+button[type="submit"] {
+    background-color: #28a745; /* Sets the background color for the submit button (green). */
+    color: white; /* Sets the text color for the submit button. */
+    width: auto; /* Allows the button to size based on its content. */
+}
+
+button[type="submit"]:hover {
+    background-color: #218838; /* Darkens the background color on hover. */
+    transform: translateY(-2px); /* Lifts the button slightly on hover. */
+}
+
+button[type="submit"]:active {
+    background-color: #1e7e34; /* Further darkens the background color when clicked. */
+    transform: translateY(0); /* Resets the button position when actively clicked. */
+}
+
+.secondary-button {
+    background-color: #6c757d; /* Sets the background color for secondary buttons (gray). */
+    color: white; /* Sets the text color for secondary buttons. */
+}
+
+.secondary-button:hover {
+    background-color: #5a6268; /* Darkens the background color of secondary buttons on hover. */
+    transform: translateY(-2px); /* Lifts the secondary button slightly on hover. */
+}
+
+.results-container {
+    margin-top: 40px; /* Adds space above the results container. */
+    padding: 30px; /* Adds padding inside the results container. */
+    border: 1px solid #b3e0ff; /* Sets the border for the results container. */
+    border-radius: 10px; /* Rounds the corners of the results container. */
+    background-color: #e6f7ff; /* Sets the background color of the results container. */
+    text-align: center; /* Centers the text within the results container. */
+    box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.05); /* Applies a subtle inner shadow to the results container. */
+}
+
+.highlight-total {
+    font-size: 2.5em; /* Increases the font size for the total highlight. */
+    font-weight: bolder; /* Makes the total highlight text bolder. */
+    color: #007bff; /* Sets the color for the total highlight. */
+    margin-top: 15px; /* Adds space above the total highlight. */
+    margin-bottom: 25px; /* Adds space below the total highlight. */
+    display: block; /* Makes the total highlight a block-level element. */
+}
+
+#breakdown {
+    text-align: left; /* Aligns text within the breakdown section to the left. */
+    margin-top: 25px; /* Adds space above the breakdown section. */
+    border-top: 1px dashed #cceeff; /* Adds a dashed top border to the breakdown section. */
+    padding-top: 20px; /* Adds padding above the content within the breakdown section. */
+}
+
+#breakdown h3 {
+    text-align: left; /* Aligns headings within the breakdown section to the left. */
+    margin-bottom: 15px; /* Adds space below headings within the breakdown section. */
+    color: #0056b3; /* Sets the color for headings within the breakdown section. */
+}
+
+#breakdown ul {
+    list-style-type: disc; /* Uses disc bullets for unordered lists within breakdown. */
+    padding-left: 25px; /* Adds left padding for the list items. */
+    margin: 0; /* Removes default margins for the list. */
+}
+
+#breakdown ul li {
+    margin-bottom: 10px; /* Adds space below each list item. */
+    font-size: 1.1em; /* Increases the font size of list items. */
+    color: #333; /* Sets the text color for list items. */
+}
+
+.note {
+    font-size: 0.9em; /* Reduces the font size for notes. */
+    color: #666; /* Sets a muted color for notes. */
+    margin-top: 30px; /* Adds space above the notes. */
+    text-align: center; /* Centers the text within notes. */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) { /* Styles applied when the viewport width is 768px or less. */
+    .container {
+        padding: 25px; /* Reduces padding in the container on smaller screens. */
+    }
+    h1 {
+        font-size: 1.8em; /* Reduces the font size of h1 on smaller screens. */
+    }
+    .highlight-total {
+        font-size: 2em; /* Reduces the font size of the total highlight on smaller screens. */
+    }
+    button[type="submit"], .secondary-button {
+        width: 100%; /* Makes buttons take full width on smaller screens. */
+        margin-right: 0; /* Removes right margin for buttons. */
+        margin-bottom: 10px; /* Adds bottom margin for stacked buttons. */
+    }
+    .radio-group {
+        flex-direction: column; /* Stacks radio buttons vertically on smaller screens. */
+        align-items: flex-start; /* Aligns stacked radio buttons to the left. */
+    }
+}
+
+@media (max-width: 480px) { /* Styles applied when the viewport width is 480px or less. */
+    .container {
+        padding: 15px; /* Further reduces padding in the container on very small screens. */
+    }
+    h1 {
+        font-size: 1.5em; /* Further reduces the font size of h1 on very small screens. */
+    }
+    legend {
+        font-size: 1em; /* Reduces the font size of the legend on very small screens. */
+    }
+    fieldset {
+        padding: 15px; /* Reduces padding inside fieldsets on very small screens. */
+    }
+    .highlight-total {
+        font-size: 1.8em; /* Further reduces the font size of the total highlight on very small screens. */
+    }
+    #breakdown ul {
+        padding-left: 20px; /* Adjusts left padding for breakdown list on very small screens. */
+    }
+}

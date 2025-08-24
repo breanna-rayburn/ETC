@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Footprint Calculator UI</title>
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+    <main class="container">
+        <h1>Carbon Footprint Calculator (Points)</h1>
+        <p>Calculate your carbon footprint based on WikiHow's "Method 1" for Household, Home Size, and Food Choices.</p>
+
+        <form id="carbonFootprintForm">
+            <input type="hidden" id="entryId"> 
+            <fieldset>
+                <legend>Household Size</legend>
+                <div class="form-group">
+                    <label for="householdMembers">Number of People in Household:</label>
+                    <input type="number" id="householdMembers" min="1" value="1" placeholder="e.g., 2">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Home Size</legend>
+                <div class="form-group">
+                    <label for="homeSquareFootage">Home Size (Square Footage):</label>
+                    <input type="number" id="homeSquareFootage" min="0" value="0" placeholder="e.g., 1500">
+                    <p class="note"><em>(Points based on WikiHow categories: Large &gt;2000sqft, Medium 1000-2000sqft, Small &lt;1000sqft, Apartment)</em></p>
+                </div>
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="isApartment">
+                    <label for="isApartment">Check if you live in an apartment</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+            <legend>Food Choices</legend>
+            <div class="form-group">
+                <p class="radio-group-heading">Your Diet Type:</p>
+                <div class="radio-group">
+                    <label for="dietMeatHeavy">
+                        <input type="radio" id="dietMeatHeavy" name="dietType" value="meatHeavy" checked>
+                        Eat domestic meat daily
+                    </label>
+                    <label for="dietAverage">
+                        <input type="radio" id="dietAverage" name="dietType" value="average">
+                        Eat domestic meat a few times per week
+                    </label>
+                    <label for="dietVegetarian">
+                        <input type="radio" id="dietVegetarian" name="dietType" value="vegetarian">
+                        Vegetarian
+                    </label>
+                    <label for="dietVegan">
+                        <input type="radio" id="dietVegan" name="dietType" value="vegan">
+                        Vegan or only eat wild meat
+                    </label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <p class="radio-group-heading">How much prepackaged food do you eat?</p>
+                <div class="radio-group">
+                    <label for="foodPrepackaged">
+                        <input type="radio" id="foodPrepackaged" name="foodPackaging" value="prepackaged" checked>
+                        Most is prepackaged convenience food
+                    </label>
+                    <label for="foodBalanced">
+                        <input type="radio" id="foodBalanced" name="foodPackaging" value="balanced">
+                        Good balance of fresh and convenience food
+                    </label>
+                    <label for="foodFresh">
+                        <input type="radio" id="foodFresh" name="foodPackaging" value="fresh">
+                        Only fresh, locally grown, or hunted food
+                    </label>
+                </div>
+            </div>
+        </fieldset>
+
+            <button type="submit" id="submitButton">Calculate Footprint</button>
+            <button type="button" id="clearFormButton" class="secondary-button">Clear Form</button>
+        </form>
+
+        <section id="results" class="results-container" style="display: none;">
+            <h2>Current Entry's Footprint:</h2>
+            <p id="totalFootprint" class="highlight-total">0 Points</p>
+            <div id="breakdown">
+                <h3>Breakdown:</h3>
+                <ul>
+                    <li id="householdFootprint">Household Size: 0 Points</li>
+                    <li id="homeSizeFootprint">Home Size: 0 Points</li>
+                    <li id="foodDietFootprint">Food Diet: 0 Points</li>
+                    <li id="foodPackagingFootprint">Food Packaging: 0 Points</li>
+                </ul>
+            </div>
+            <p class="note"><em>Note: Calculations are based directly on the point system outlined in WikiHow's "Method 1."</em></p>
+        </section>
+
+        </main>
+
+</body>
+</html>
