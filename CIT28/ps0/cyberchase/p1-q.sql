@@ -8,7 +8,7 @@
 -- updates the pow.txt with content in single quotes
 .print 'Query 1'
 
--- SQL command (query) to view all the column contents in the longlist table   
+-- SQL command (query) to view all the column contents in the episodes table   
 -- Copy your SQL command below here
 SELECT "title" from "episodes" WHERE "season" = 1;
 
